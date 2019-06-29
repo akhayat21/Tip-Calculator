@@ -1,0 +1,12 @@
+.btn {
+    border-radius: 25px;
+}
+
+.counter {
+    display: inline-block
+}
+
+#split{
+    width: 50px;
+    text-align: center;
+}
