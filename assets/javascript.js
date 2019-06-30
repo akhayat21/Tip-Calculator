@@ -1,32 +1,54 @@
-function increase() {
-    var val = document.getElementById("split").innerHTML;
+function increaseCount() {
+    var val = document.getElementById("split").value;
     if (val === "no") {
-        document.getElementById("split").innerHTML = 2;
+        document.getElementById("split").value = 2;
     } else {
-        document.getElementById("split").innerHTML = parseInt(document.getElementById("split").innerHTML) + 1;
+        document.getElementById("split").value = parseInt(document.getElementById("split").value) + 1;
     }
 
 }
 
-function decrease() {
-    var val = document.getElementById("split").innerHTML;
+function decreaseCount() {
+    var val = document.getElementById("split").value;
     if (val === "no") {
     } else if (val === "2") {
-        document.getElementById("split").innerHTML = "no";
+        document.getElementById("split").value = "no";
     }
     else {
-        document.getElementById("split").innerHTML = parseInt(document.getElementById("split").innerHTML) - 1;
+        document.getElementById("split").value = parseInt(document.getElementById("split").value) - 1;
+    }
+
+}
+
+function increaseTip() {
+    var val = document.getElementById("split").value;
+    if (val === "no") {
+        document.getElementById("split").value = 2;
+    } else {
+        document.getElementById("split").value = parseInt(document.getElementById("split").value) + 1;
+    }
+
+}
+
+function decreaseTip() {
+    var val = document.getElementById("split").value;
+    if (val === "no") {
+    } else if (val === "2") {
+        document.getElementById("split").value = "no";
+    }
+    else {
+        document.getElementById("split").value = parseInt(document.getElementById("split").value) - 1;
     }
 
 }
 
 function splitFinder() {
-    var split = document.getElementById("split").innerHTML;
+    var split = document.getElementById("split").value;
     if(split === "no"){
         split = 1;
         return split;
     } else {
-        split = parseInt(document.getElementById("split").innerHTML);
+        split = parseInt(document.getElementById("split").value);
         return split;
     }
 }
@@ -40,4 +62,6 @@ function calculate() {
     var tipTotal = billTotal*tip;
     var tipEach = tipTotal/split;
     var totalEach = billEach + tipEach; 
+    document.getElementById("result").innerHTML = totalEach;
+    document.getElementById("res").style.visibility = "visible";
 }

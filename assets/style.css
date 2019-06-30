@@ -6,7 +6,29 @@
     display: inline-block
 }
 
-#split{
+#split, #tip{
     width: 50px;
     text-align: center;
+}
+
+input:focus {
+    border-bottom: none!important;
+    box-shadow: none!important;
+}
+
+input {
+    border-bottom: none!important;
+    box-shadow: none!important;
+}
+
+#calc {
+    width: 25%;
+    margin: auto;
+
+}
+
+#res {
+    visibility: hidden;
+    width: 25%;
+    margin: auto;
 }

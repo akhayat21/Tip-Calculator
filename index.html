@@ -14,17 +14,25 @@
 <body>
     <div id="calc">
         <h4>Bill Total</h4>
-        <input id="total" value=0>
+        <input id="total" value="">
         <h4>Desired Tip</h4>
-        <input id="tip" value=0>
+        <div class="counter">
+                <button class="btn-floating waves-effect waves-light btn counter"><i onclick="increaseTip()" class="fas fa-caret-up"></i></button>
+                <input class="counter" id="tip" value=15>
+                <button class="btn-floating waves-effect waves-light btn counter"><i onclick="decreaseTip()" class="fas fa-caret-down"></i></button>
+        </div>
+        
         <h4>Split check?</h4>
         <div class="counter">
-            <button class="btn-floating waves-effect waves-light btn counter"><i onclick="decrease()" class="fas fa-caret-left"></i></button>
-            <input class="counter" id="split">no</input>
-            <button class="btn-floating waves-effect waves-light btn counter"><i onclick="increase()" class="fas fa-caret-right"></i></button>
+            <button class="btn-floating waves-effect waves-light btn counter"><i onclick="decreaseCount()" class="fas fa-caret-left"></i></button>
+            <input class="counter" id="split" value="no"></input>
+            <button class="btn-floating waves-effect waves-light btn counter"><i onclick="increaseCount()" class="fas fa-caret-right"></i></button>
         </div>
         <br>
         <button onclick="calculate()">How much Should I tip?</button>
+    </div>
+    <div id="res">
+        <div id="result"></div>
     </div>
     <script src="assets/javascript.js"></script>
     <script src="https://kit.fontawesome.com/ab608643c2.js"></script>
